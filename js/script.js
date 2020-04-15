@@ -85,6 +85,15 @@ function printQuote() {
 }
 
 /***
+ * `getFreshQuoteTimer` function
+***/
+function getFreshQuoteTimer() {
+  window.setInterval(printQuote, 20000)
+}
+
+getFreshQuoteTimer();
+
+/***
  * click event listener for the print quote button
  * DO NOT CHANGE THE CODE BELOW!!
 ***/
