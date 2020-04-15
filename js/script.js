@@ -1,15 +1,4 @@
-/******************************************
-Treehouse FSJS Techdegree:
-project 1 - A Random Quote Generator
-******************************************/
-
-// For assistance: 
-// Check the "Project Resources" section of the project instructions
-// Reach out in your Slack community - https://treehouse-fsjs-102.slack.com/app_redirect?channel=chit-chat
-
-/*** 
- * `quotes` array 
-***/
+// set array of quote objects
 let quotes = [
   {
     "quote": "Innovation distinguishes between a leader and a follower.",
@@ -39,26 +28,23 @@ let quotes = [
     "type": "happiness"
   }
 ];
+
+// set array of background colors
 let colors = ['#2ecc71', '#8e44ad', '#e67e22', '#34495e', '#f1c40f'];
 
-
-/***
- * `getRandomQuote` function
-***/
+// gets random quote from quotes array
 function getRandomQuote() {
   let randomNumber = Math.floor(Math.random() * 5);
   return quotes[randomNumber];
 }
 
+// gets random color from colors array
 function getRandomColor() {
   let randomNumber = Math.floor(Math.random() * 5);
   return colors[randomNumber];
 }
 
-
-/***
- * `printQuote` function
-***/
+// sets page quote and background color to new random quote and color
 function printQuote() {
   let randomColor = getRandomColor();
   document.body.style.backgroundColor = randomColor;
@@ -84,18 +70,12 @@ function printQuote() {
   document.getElementById('quote-box').innerHTML = htmlString;
 }
 
-/***
- * `getFreshQuoteTimer` function
-***/
+// gets and sets new quote and background color every 20 seconds
 function getFreshQuoteTimer() {
   window.setInterval(printQuote, 20000)
 }
 
 getFreshQuoteTimer();
 
-/***
- * click event listener for the print quote button
- * DO NOT CHANGE THE CODE BELOW!!
-***/
-
+// gets and sets new quote and background color when button clicked
 document.getElementById('load-quote').addEventListener("click", printQuote, false);
