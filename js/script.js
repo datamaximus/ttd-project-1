@@ -13,7 +13,8 @@ project 1 - A Random Quote Generator
 let quotes = [
   {
     "quote": "Innovation distinguishes between a leader and a follower.",
-    "source": "Steve Jobs"
+    "source": "Steve Jobs",
+    "type": "inspirational, leadership"
   },
   {
     "quote": "The boisterous sea of liberty is never without a wave.",
@@ -21,18 +22,21 @@ let quotes = [
   },
   {
     "quote": "We are no longer happy so soon as we wish to be happier.",
-    "source": "Walter Savage Landor"
+    "source": "Walter Savage Landor",
+    "type": "happiness"
   },
   {
     "quote": "I am 100 percent in favor of the intelligent use of drugs, and 1,000 percent against the thoughtless use of them, whether caffeine or LSD. And drugs are not central to my life.",
     "source": "Timothy Leary",
     "citation": "Chaos & Cyber Culture",
-    "year": "1994"
+    "year": "1994",
+    "type": "culture"
   },
   {
     "quote": "My happiness is not the means to any end. It is the end. It is its own goal. It is its own purpose.",
     "source": "Ayn Rand",
-    "citation": "Anthem"
+    "citation": "Anthem",
+    "type": "happiness"
   }
 ];
 let colors = ['#2ecc71', '#8e44ad', '#e67e22', '#34495e', '#f1c40f'];
@@ -69,6 +73,10 @@ function printQuote() {
 
   if (randomQuote.hasOwnProperty("year")) {
     htmlString += `<span class="year"> ${randomQuote.year} </span>`
+  }
+
+  if (randomQuote.hasOwnProperty("type")) {
+    htmlString += `<br></br><span class="type"> ${randomQuote.type} </span>`
   }
 
   htmlString += `</p>`;
