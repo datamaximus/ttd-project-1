@@ -34,13 +34,13 @@ let colors = ['#2ecc71', '#8e44ad', '#e67e22', '#34495e', '#f1c40f'];
 
 // gets random quote from quotes array
 function getRandomQuote() {
-  let randomNumber = Math.floor(Math.random() * 5);
+  let randomNumber = Math.floor(Math.random() * quotes.length);
   return quotes[randomNumber];
 }
 
 // gets random color from colors array
 function getRandomColor() {
-  let randomNumber = Math.floor(Math.random() * 5);
+  let randomNumber = Math.floor(Math.random() * colors.length);
   return colors[randomNumber];
 }
 
